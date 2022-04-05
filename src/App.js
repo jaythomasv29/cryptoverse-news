@@ -1,9 +1,16 @@
-import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd';
-
-import { Navbar, HomePage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components';
-import './App.css';
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import { Layout, Typography, Space } from "antd";
+import {
+  Navbar,
+  HomePage,
+  Exchanges,
+  Cryptocurrencies,
+  CryptoDetails,
+  News,
+} from "./components";
+import "./App.css";
+const { Footer } = Layout;
 
 const App = () => {
   return (
@@ -33,12 +40,20 @@ const App = () => {
             </Switch>
           </div>
         </Layout>
-      </div>
-      <div className="footer">
-
+        {/* modify footer later to fix responsiveness */}
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            CryptoVerse <br />
+            All rights reserved
+            <Link to="/">Home</Link>
+          </Typography.Title>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
