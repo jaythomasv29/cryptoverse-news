@@ -18,6 +18,7 @@ const App = () => {
       <div className="navbar">
         <Navbar />
       </div>
+        
       <div className="main">
         <Layout>
           <div className="routes">
@@ -39,19 +40,24 @@ const App = () => {
               </Route>
             </Switch>
           </div>
-        </Layout>
+        
         {/* modify footer later to fix responsiveness */}
         <div className="footer">
+          
           <Typography.Title
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
             CryptoVerse <br />
-            All rights reserved
+            All rights reserved <br />
             <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
           </Typography.Title>
         </div>
+        </Layout>
       </div>
+        
     </div>
   );
 };
